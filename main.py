@@ -169,7 +169,6 @@ for n in range(epochs):
     train_step(initial_image)
     print(".", end='')
   print("Train step: {}".format(step))
-  plt.imshow(tensor_to_image(initial_image))
 
 # Save the result
 file_name = config.OUTPUT_PATH
