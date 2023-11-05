@@ -1,2 +1,4 @@
 env
 stylized-image.png
+*.pyc
+__pycache__
