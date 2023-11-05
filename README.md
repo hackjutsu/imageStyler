@@ -10,4 +10,4 @@ deactivate
 pip freeze > requirements.txt
 ```
 
-[](./example_outcome.jpg)
+![](./example_outcome.jpg)
