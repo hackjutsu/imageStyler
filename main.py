@@ -1,5 +1,6 @@
 import tensorflow as tf
 import numpy as np
+import config
 import matplotlib.pyplot as plt
 from PIL import Image
 
@@ -125,8 +126,8 @@ style_layers = ['block1_conv1',
 content_layers = ['block5_conv2']
 
 # Load content and style images
-content_path = 'content.jpg'
-style_path = 'style.jpg'
+content_path = config.CONTENT_PATH
+style_path = config.STYLE_PATH
 
 # Load and preprocess the images
 content_image = load_img(content_path)
@@ -158,8 +159,8 @@ num_content_layers = len(content_layers)
 num_style_layers = len(style_layers)
 
 # Now we run the style transfer
-epochs = 1
-steps_per_epoch = 100
+epochs = config.EPOCHS
+steps_per_epoch = config.STEPS_PER_EPOCH
 
 step = 0
 for n in range(epochs):
@@ -171,7 +172,7 @@ for n in range(epochs):
   plt.imshow(tensor_to_image(initial_image))
 
 # Save the result
-file_name = 'stylized-image.png'
+file_name = config.OUTPUT_PATH
 tensor_to_image(initial_image).save(file_name)
 
 # Display the stylized image
