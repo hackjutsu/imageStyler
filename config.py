@@ -1,4 +1,4 @@
-EPOCHS = 1
+EPOCHS = 10
 STEPS_PER_EPOCH = 100
 
 CONTENT_PATH = 'content.jpg'

@@ -7,6 +7,10 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
+print("TensorFlow version:", tf.__version__)
+print("Is GPU available:", len(tf.config.list_physical_devices('GPU')) > 0)
+print("Available GPU devices:", tf.config.list_physical_devices('GPU'))
+
 # Function to load an image and limit its maximum dimension to 512 pixels
 def load_img(path_to_img):
   max_dim = 512
