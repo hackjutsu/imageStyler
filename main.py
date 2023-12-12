@@ -1,8 +1,11 @@
 import tensorflow as tf
 import numpy as np
 import config
-import matplotlib.pyplot as plt
 from PIL import Image
+
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
 
 # Function to load an image and limit its maximum dimension to 512 pixels
 def load_img(path_to_img):

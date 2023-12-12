@@ -7,6 +7,7 @@ deactivate
 ```
 
 ```bash
+pip install -r requirements.txt # install dependencies from requirements.txt
 pip freeze > requirements.txt
 ```
 
