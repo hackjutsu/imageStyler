@@ -7,9 +7,15 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
-print("TensorFlow version:", tf.__version__)
-print("Is GPU available:", len(tf.config.list_physical_devices('GPU')) > 0)
-print("Available GPU devices:", tf.config.list_physical_devices('GPU'))
+print("=====> TensorFlow version:", tf.__version__)
+
+# Check if GPU is available and print the type of processor being used
+if len(tf.config.list_physical_devices('GPU')) > 0:
+    print("=====> Using GPU for processing.")
+    print("=====> Available GPU devices:", tf.config.list_physical_devices('GPU'))
+else:
+    print("=====> Using CPU for processing.")
+
 
 # Function to load an image and limit its maximum dimension to 512 pixels
 def load_img(path_to_img):
